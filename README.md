@@ -1,2 +1,2 @@
-# FREE-BLOG-FOR-EVERYONE
-3blog4every1
+# PubLog
+Free blog for everyone
