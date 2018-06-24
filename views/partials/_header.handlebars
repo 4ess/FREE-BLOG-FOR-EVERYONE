@@ -1,7 +1,7 @@
-<nav class="purple darken-4">
+<nav class=" light-green accent-4">
   <div class="container ">
     <div class="nav-wrapper">
-      <a href="/stories" class="brand-logo center">PubLog</a>
+      <a href="/" class="brand-logo center">PubLog</a>
       <a href="#" data-activates="main-menu" class="button-collapse show-on-large">
         <i class="fa fa-bars"></i>
       </a>
@@ -9,7 +9,7 @@
       <ul class="right hide-on-small-only">
         {{#if user}}
         <li>
-          <a href="/dashboard">Show us your stories, {{user.firstName}}
+          <a href="/dashboard">Just do it, {{user.firstName}}
           </a>
         </li>
         <li>
@@ -28,27 +28,32 @@
       {{!-- SIDE MENU --}}
       <ul class="side-nav" id="main-menu">
 
-        {{#if user}} 
-        {{else}}
+        {{#if user}} {{else}}
         <li>
           <a class="btn pink darken-4" href="/auth/google">
             <i class="fa fa-google-plus left"></i> Google Login</a>
         </li>
         {{/if}}
 
-          <li>
-            <a href="/stories"> <i class="fa fa-book"></i> PubLogs</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="/dashboard"> <i class="fa fa-cog"></i> Dashboard</a>
-          </li>
-          <li>
-            <a href="/stories/my"> <i class="fa fa-user"></i> My publications</a>
-          </li>     
-          <li>
-            <a href="/auth/logout"> <i class="fa fa-sign-out"></i> AFK!!!1</a>
-          </li>                        
+        <li>
+          <a href="/stories">
+            <i class="fa fa-book"></i> PubLogs</a>
+        </li>
+        {{#if user}}
+        <li class="divider"></li>
+        <li>
+          <a href="/dashboard">
+            <i class="fa fa-cog"></i> Dashboard</a>
+        </li>
+        <li>
+          <a href="/stories/my">
+            <i class="fa fa-user"></i> My publications</a>
+        </li>
+        <li>
+          <a href="/auth/logout">
+            <i class="fa fa-sign-out"></i> AFK!!!1</a>
+        </li>
+        {{/if}}
       </ul>
     </div>
   </div>
