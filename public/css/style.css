@@ -16,6 +16,22 @@
     margin-top:20px;
   }
 
-  h1,h2{
+  h1,h2,h3{
     color:#11c485
+  }
+
+  .cevadiv{
+    color: whitesmoke
+  }
+
+  .story-text{
+    height:120px;
+  }
+
+  .dash-status{
+    text-transform: capitalize;
+  }
+
+  #delete-form{
+    display:inline;
   }

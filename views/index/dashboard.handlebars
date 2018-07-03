@@ -1,2 +1,31 @@
-<h2>Let us see your PubLogs, {{user.firstName}}</h2>
-<p> Your PubLogs</p>
+<h3>Your PubLogs, {{user.firstName}}</h3>
+{{#if stories}}
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each stories}}
+        <tr>
+          <td><a href="/stories/show/{{id}}">{{title}}</a></td>
+          <td>{{formatDate data 'MMMM Do YYYY'}}</td>
+          <td><span class="dash-status">{{status}}</span></td>
+          <td><a class="btn left-align" href="/stories/edit/{{id}}">Edit</a>
+            <form action="/stories/{{id}}?_method=DELETE" method="POST" id="delete-form">
+            <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" class="btn red">Delete</button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p>You do not have PubLogs.</p>
+  <p>Start sharing your life with us :) </p>
+{{/if}}
